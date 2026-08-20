@@ -1,0 +1,81 @@
+{
+  "manifest": {
+    "allowedNetworkOrigins": [],
+    "apiVersion": {
+      "major": 2,
+      "minor": 0,
+      "preview": 2
+    },
+    "contributions": [
+      {
+        "configuration": {
+          "shortcut": "cmd+shift+l",
+          "systemImage": "link.badge.plus",
+          "title": "Check Links",
+          "titleLocalizationKey": "link_checker.check"
+        },
+        "id": "check-links",
+        "kind": "command",
+        "requiredGrants": [
+          "command.register"
+        ]
+      },
+      {
+        "configuration": {
+          "anchor": "extensions",
+          "commandID": "check-links",
+          "order": "40"
+        },
+        "id": "check-links-menu",
+        "kind": "menu-item",
+        "requiredGrants": [
+          "menu.register"
+        ]
+      },
+      {
+        "configuration": {
+          "activationCommand": "check-links",
+          "adapter": "declarative-content",
+          "contentOwner": "extension-runtime",
+          "order": "40",
+          "privacy": "document-content",
+          "scope": "document",
+          "slot": "document.utility-window",
+          "systemImage": "link.badge.plus",
+          "title": "Link Checker",
+          "titleLocalizationKey": "link_checker.title"
+        },
+        "id": "link-checker-window",
+        "kind": "surface",
+        "requiredGrants": [
+          "surface.register"
+        ]
+      }
+    ],
+    "entryPoint": "Sources/main.js",
+    "hostWarmupRequirements": [],
+    "id": "com.markdownql.link-checker",
+    "license": "MIT",
+    "minimumAppVersion": "5.0.0",
+    "name": "Link Checker",
+    "publisher": "MarkdownQL",
+    "requestedGrants": [
+      "command.register",
+      "menu.register",
+      "surface.register",
+      "document.links.check"
+    ],
+    "runtime": "javascript",
+    "runtimeActivationPolicy": "on-command",
+    "version": "1.0.0"
+  },
+  "modulePaths": [
+    "Sources/main.js"
+  ],
+  "resourcePaths": [
+    "CHANGELOG.md",
+    "README.md",
+    "Evolution/change.json",
+    "Evolution/replay.json"
+  ]
+}

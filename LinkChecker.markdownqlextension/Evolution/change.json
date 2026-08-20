@@ -1,0 +1,21 @@
+{
+  "baseContentDigest" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "candidateContentDigest" : "cffee10b8c18c276641d9acfb1d49fdaebd5c59260a8f85039c9886f5b8695be",
+  "capabilityChanges" : [],
+  "changeLevel" : "major",
+  "changedPaths" : [
+    "CHANGELOG.md", "README.md", "Sources/main.js", "manifest.json"
+  ],
+  "extensionID" : "com.markdownql.link-checker",
+  "fromVersion" : "0.0.0",
+  "grantChanges" : [],
+  "provenance" : {
+    "actor" : "ai",
+    "generator" : "markdownql-extension-evolution/1",
+    "sourceRevision" : "1ae9051d3f3546d3abae33f94deb9f52aa05d756"
+  },
+  "replayDigest" : "b3163a22ecc773541c591d8ad3acd520d3f83e359c951cad7f54249d36eadca9",
+  "schemaVersion" : 1,
+  "summary" : "Introduce the first clean-room behavior-migrated Extension.",
+  "toVersion" : "1.0.0"
+}

@@ -1,0 +1,8 @@
+{
+  "events" : [
+    { "kind" : "lifecycle", "sequence" : 1, "value" : "baseline-recorded" }
+  ],
+  "extensionID" : "com.markdownql.link-checker",
+  "extensionVersion" : "1.0.0",
+  "schemaVersion" : 1
+}

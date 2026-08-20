@@ -1,0 +1,24 @@
+name: Validate extension
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check out the pinned MarkdownQL Extension SDK
+        uses: actions/checkout@v4
+        with:
+          repository: jason2be/markdownql-extension-sdk
+          ref: v1.0.2
+          path: markdownql-extension-sdk
+      - name: Validate the package offline
+        run: >-
+          swift run --package-path markdownql-extension-sdk
+          markdownql-extension-validate LinkChecker.markdownqlextension
