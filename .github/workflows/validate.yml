@@ -11,9 +11,9 @@ jobs:
   validate:
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Check out the pinned MarkdownQL Extension SDK
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           repository: jason2be/markdownql-extension-sdk
           ref: v1.0.2
