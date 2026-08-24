@@ -8,15 +8,17 @@
 - Check heading anchors, relative files and images, WikiLinks, reference-style links, and HTTP(S) targets.
 - Ignore links inside inline and fenced code.
 - Distinguish broken targets from targets that cannot be verified.
-- Report line and column positions in a declarative result window.
+- Bound remote checks to one overall deadline with redirect-safe probing and size-limited `GET` fallback.
+- Report complete or partial results with local filtering and recoverable refresh.
+- Navigate issue rows back to their source range only while the document revision still matches.
 - Publish no command, surface, scan, or network work while disabled.
 
 The JavaScript runtime has no direct filesystem or network access. It requests the bounded `document.links.check` host capability; MarkdownQL Core owns document authorization, local-folder containment, HTTP(S) probing, cancellation, and scope revocation.
 
 ## Release
 
-- Extension version: `1.0.0`
-- Release tag: `v1.0.0`
+- Extension version: `1.1.1`
+- Release tag: `v1.1.1`
 - Minimum MarkdownQL version: `5.0.0`
 - SDK contract: `2.0-preview.2`
 - Validation SDK: [`markdownql-extension-sdk` `v1.0.2`](https://github.com/jason2be/markdownql-extension-sdk/tree/v1.0.2)
@@ -38,7 +40,7 @@ The behavior reference is [`akurach/markedit-link-checker`](https://github.com/a
 
 When reviewed on 2026-08-21, that repository contained neither a `LICENSE`/`COPYING` file nor a package license declaration. No upstream TypeScript or other source code was copied or adapted. The implementation in this repository is original MarkdownQL extension code released under MIT.
 
-The initial release intentionally uses a result window rather than MarkEdit's editor underlines and click-to-source navigation. Those behaviors require future public host-governed decoration and navigation contracts; they must not be implemented by exposing native editor or filesystem objects to the extension.
+The extension intentionally uses a result window rather than MarkEdit's editor underlines. Source navigation is now implemented through an opaque, revision-bound host contract; native editor, filesystem, and network objects remain unavailable to the extension.
 
 ## Repository layout
 

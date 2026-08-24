@@ -10,4 +10,6 @@ The JavaScript package is published independently under the MIT License at [jaso
 
 ## Security and lifecycle
 
-The isolated JavaScript runtime has no filesystem or network access. It requests one bounded host capability, `document.links.check`; the host checks the current document snapshot, targets inside the authorized document folder, and HTTP(S) targets. Disabled packages publish no menu or utility surface and perform no scan or network request.
+The isolated JavaScript runtime has no filesystem or network access. It requests one bounded host capability, `document.links.check`; the host checks the current revision, targets inside the authorized document folder, and public HTTP(S) targets under one overall deadline. Remote redirects and resolved addresses are revalidated by the host, and an unsupported `HEAD` request may fall back to a response-limited `GET` whose body is discarded.
+
+Results distinguish verified and unverifiable candidates and disclose timeout or size truncation. Issue rows carry only host-issued opaque handles. A direct user action may navigate back to the checked source range while the document revision and window scope still match; stale handles fail closed and the previous result remains visible. Disabled packages publish no menu or utility surface and perform no scan or network request.

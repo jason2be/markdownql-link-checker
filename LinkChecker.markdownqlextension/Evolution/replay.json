@@ -1,8 +1,48 @@
 {
   "events" : [
-    { "kind" : "lifecycle", "sequence" : 1, "value" : "baseline-recorded" }
+    {
+      "correlationID" : "link-checker-run",
+      "kind" : "host.request",
+      "sequence" : 1,
+      "value" : {
+        "category" : "positive",
+        "contributionID" : "link-checker-window",
+        "operation" : "surface.render",
+        "requiredGrant" : "document.links.check"
+      }
+    },
+    {
+      "correlationID" : "link-checker-run",
+      "kind" : "extension.response",
+      "sequence" : 2,
+      "value" : {
+        "outcome" : "success",
+        "value" : { "type" : "column" }
+      }
+    },
+    {
+      "correlationID" : "link-checker-stale-navigation",
+      "kind" : "host.request",
+      "sequence" : 3,
+      "value" : {
+        "category" : "stale-revision",
+        "contributionID" : "link-checker-window",
+        "operation" : "surface.event",
+        "requiredGrant" : "document.links.check"
+      }
+    },
+    {
+      "correlationID" : "link-checker-stale-navigation",
+      "kind" : "extension.response",
+      "sequence" : 4,
+      "value" : {
+        "failureCode" : "stale-revision",
+        "outcome" : "failure"
+      }
+    },
+    { "kind" : "lifecycle", "sequence" : 5, "value" : "baseline-recorded" }
   ],
   "extensionID" : "com.markdownql.link-checker",
-  "extensionVersion" : "1.0.0",
+  "extensionVersion" : "1.1.1",
   "schemaVersion" : 1
 }

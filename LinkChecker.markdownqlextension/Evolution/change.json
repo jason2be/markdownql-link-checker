@@ -1,21 +1,26 @@
 {
-  "baseContentDigest" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-  "candidateContentDigest" : "cffee10b8c18c276641d9acfb1d49fdaebd5c59260a8f85039c9886f5b8695be",
+  "baseContentDigest" : "7cb6181e446734044407323c9f62c1288812d6cfa951c2045656a9180aa1f7c2",
+  "candidateContentDigest" : "957da6be00be94892b65e3426dffe3231b240ab138846c27cbd71558600dc5c1",
   "capabilityChanges" : [],
-  "changeLevel" : "major",
+  "changeLevel" : "minor",
   "changedPaths" : [
-    "CHANGELOG.md", "README.md", "Sources/main.js", "manifest.json"
+    "CHANGELOG.md",
+    "Evolution/change.json",
+    "Evolution/replay.json",
+    "README.md",
+    "Sources/main.js",
+    "manifest.json"
   ],
   "extensionID" : "com.markdownql.link-checker",
-  "fromVersion" : "0.0.0",
+  "fromVersion" : "1.0.0",
   "grantChanges" : [],
   "provenance" : {
     "actor" : "ai",
     "generator" : "markdownql-extension-evolution/1",
-    "sourceRevision" : "1ae9051d3f3546d3abae33f94deb9f52aa05d756"
+    "sourceRevision" : "20b8ecd3"
   },
-  "replayDigest" : "b3163a22ecc773541c591d8ad3acd520d3f83e359c951cad7f54249d36eadca9",
+  "replayDigest" : "bbbb1fbe26ee08229f2f54b4eef5515ce9147eb89eb29c880216a50ff9249fcc",
   "schemaVersion" : 1,
-  "summary" : "Introduce the first clean-room behavior-migrated Extension.",
-  "toVersion" : "1.0.0"
+  "summary" : "Add bounded safe probing, explicit partial results, filtering, recovery, and revision-bound issue navigation.",
+  "toVersion" : "1.1.1"
 }
